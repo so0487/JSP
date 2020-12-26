@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body{
+	background-color: #dcf2d0
+}
+
+
+div{
+	width: 100%;
+	
+}
+
+
+form{
+	border: 1px solid;
+	margin: 0 auto;
+	width: 50%;
+}

@@ -1,0 +1,66 @@
+package com.lost.filter;
+
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+
+import com.lost.action.ApplicationContext;
+import com.lost.dto.MenuVO;
+import com.lost.service.MenuService;
+
+
+
+public class MenuHttpServletRequestWrapper extends HttpServletRequestWrapper {
+
+	private Map<String, String[]> parameterMap = null;
+
+	private MenuService menuService;
+
+	public MenuHttpServletRequestWrapper(HttpServletRequest request) throws SQLException {
+		super(request);
+
+		menuService = (MenuService) ApplicationContext.getApplicationContext().get("menuService");
+		
+		
+		parameterMap = new java.util.HashMap<String, String[]>(request.getParameterMap());
+
+		try {
+			List<MenuVO> menuList = menuService.getMainMenuList();
+
+			request.setAttribute("menuList", menuList);
+
+			System.out.println("Menu가 준비되었습니다.");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
+	@Override
+	public String getParameter(String name) {
+		String[] values = getParameterValues(name);
+		return values!=null?values[0]:null;
+	}
+
+	@Override
+	public Map<String, String[]> getParameterMap() {
+		return this.parameterMap;
+	}
+
+	@Override
+	public Enumeration<String> getParameterNames() {
+		return Collections.enumeration(parameterMap.keySet());
+	}
+
+	@Override
+	public String[] getParameterValues(String name) {
+		return parameterMap.get(name);
+	}
+
+}

@@ -1,0 +1,41 @@
+
+8월 28, 2020 24:03:53.41 NEW SESSION
+8월 28, 2020 24:03:53.41 [11056:16664:0828/000353.404:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+
+8월 30, 2020 10:38:14.94 NEW SESSION
+8월 30, 2020 10:38:14.94 [9152:15000:0830/103814.930:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+8월 31, 2020 01:36:15.64 [20832:9780:0831/013615.639:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 31, 2020 02:01:15.48 [20832:9780:0831/020115.482:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 31, 2020 02:37:07.52 [20832:9780:0831/023707.522:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 31, 2020 05:37:15.16 [20832:9780:0831/053715.163:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 31, 2020 05:37:15.49 [20832:9780:0831/053715.497:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -105
+
+9월 01, 2020 05:49:38.80 NEW SESSION
+9월 01, 2020 05:49:38.80 [12588:3760:0901/054938.801:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+
+9월 02, 2020 05:49:36.65 NEW SESSION
+9월 02, 2020 05:49:36.65 [14904:5224:0902/054936.621:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+
+9월 03, 2020 24:15:23.92 NEW SESSION
+9월 03, 2020 24:15:23.92 [13240:14296:0903/001523.908:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:09:24.37 [11480:664:0903/010924.373:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:09:53.33 [7404:13832:0903/010953.330:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:22:56.50 [14192:17952:0903/012256.508:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:39:41.17 [12212:15800:0903/013941.176:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:41:53.65 [16560:9784:0903/014153.644:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 03, 2020 01:42:45.23 [18064:8540:0903/014245.236:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+
+9월 06, 2020 09:25:43.71 NEW SESSION
+9월 06, 2020 09:25:43.71 [14616:10776:0906/092543.705:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 06, 2020 09:25:44.97 [14616:13912:0906/092544.969:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+9월 06, 2020 09:29:14.93 [14616:2788:0906/092914.932:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 06, 2020 09:29:44.51 [14616:2788:0906/092944.510:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 06, 2020 09:29:59.45 [8048:13932:0906/092959.459:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 06, 2020 09:49:26.88 [7088:15056:0906/094926.879:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 06, 2020 10:47:55.98 [11940:7200:0906/104755.984:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 06, 2020 11:02:50.33 [5672:3960:0906/110250.331:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 06, 2020 11:04:15.84 [8588:9816:0906/110415.841:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+
+9월 08, 2020 01:11:35.22 NEW SESSION
+9월 08, 2020 01:11:35.22 [17388:15268:0908/011135.214:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 08, 2020 01:11:36.37 [17388:5348:0908/011136.373:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).

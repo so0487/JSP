@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	
+	<context-param>
+		<param-name>attachDAO</param-name>
+		<param-value>com.jsp.dao.AttachDAOImpl</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>pdsService</param-name>
+		<param-value>com.jsp.service.PdsServiceImpl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pdsDAO</param-name>
+		<param-value>com.jsp.dao.PdsDAOImpl</param-value>
+	</context-param>
+	
+	
+	<context-param>
+		<param-name>replyService</param-name>
+		<param-value>com.jsp.service.ReplyServiceImpl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>replyDAO</param-name>
+		<param-value>com.jsp.dao.ReplyDAOImpl</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>boardService</param-name>
+		<param-value>com.jsp.service.BoardServiceImpl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>boardDAO</param-name>
+		<param-value>com.jsp.dao.BoardDAOImpl</param-value>
+	</context-param>
+	
+	
+	<context-param>
+		<param-name>noticeService</param-name>
+		<param-value>com.jsp.service.NoticeServiceImpl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>noticeDAO</param-name>
+		<param-value>com.jsp.dao.NoticeDAOImpl</param-value>
+	</context-param>
+	
+	
+	<context-param>
+		<param-name>menuService</param-name>
+		<param-value>com.jsp.service.MenuServiceImpl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>menuDAO</param-name>
+		<param-value>com.jsp.dao.MenuDAOImpl</param-value>
+	</context-param>
+	
+	
+	<context-param>
+		<param-name>memberService</param-name>
+		<param-value>com.jsp.service.MemberServiceImpl</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>memberDAO</param-name>
+		<param-value>com.jsp.dao.MemberDAOImpl</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>sqlSessionFactory</param-name>
+		<param-value>com.jsp.mybatis.OracleMyBatisSqlSessionFactory</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>com.jsp.listener.InitListener</listener-class>
+	</listener>
+	
+	<filter>
+		<filter-name>loginCheckFilter</filter-name>
+		<filter-class>com.jsp.filter.LoginCheckFilter</filter-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>exclude</param-name>
+			<param-value>common</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginCheckFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>memberDisabledFilter</filter-name>
+		<filter-class>com.jsp.filter.MemberDisabledFilter</filter-class>
+		<init-param>
+			<param-name>checkURL</param-name>
+			<param-value>regist,modify,remove,disabled,enabled,stop</param-value>
+		</init-param>		
+		<load-on-startup>1</load-on-startup>
+	</filter>
+	<filter-mapping>
+		<filter-name>memberDisabledFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+		
+	<filter>
+		<filter-name>setCharacterEncodingFilter</filter-name>
+		<filter-class>
+			org.apache.catalina.filters.SetCharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>setCharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+<!-- 	
+	<filter>
+		<filter-name>MenuFilter</filter-name>
+		<filter-class>com.jsp.filter.MenuFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MenuFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+ -->
+ 
+ 	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>
+			com.opensymphony.sitemesh.webapp.SiteMeshFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ 
+	<servlet>
+		<servlet-name>FrontServlet</servlet-name>
+		<servlet-class>com.jsp.servlet.dispatcher.FrontServlet</servlet-class>
+		<init-param>
+			<param-name>handlerMapper</param-name>
+			<param-value>com.jsp.servlet.dispatcher.HandlerMapper</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FrontServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

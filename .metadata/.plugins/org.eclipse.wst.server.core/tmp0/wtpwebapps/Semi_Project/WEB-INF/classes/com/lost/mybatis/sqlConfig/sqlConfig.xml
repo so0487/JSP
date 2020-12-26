@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="com/lost/properties/db.properties" />
+
+   <typeAliases>
+	<typeAlias type="java.lang.String" alias="str" />
+	<typeAlias type="java.lang.Integer" alias="int" />
+    <typeAlias type="com.lost.dto.MenuVO" alias="menu" />
+    <typeAlias type="com.lost.dto.MemberVO" alias="member" />
+    <typeAlias type="com.lost.dto.NoticeVO" alias="notice" />
+    <typeAlias type="com.lost.dto.ClothVO" alias="cloth" />
+    <typeAlias type="com.lost.dto.QnAVO" alias="qna" />
+    <typeAlias type="com.lost.dto.ReplyVO" alias="reply" />
+
+   </typeAliases>
+
+	<environments default="dev">
+		<environment id="dev">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driverClassName}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+   
+   <mappers> 
+      <mapper resource="com/lost/mybatis/mappers/Menu-Mapper.xml"/>
+      <mapper resource="com/lost/mybatis/mappers/Member-Mapper.xml"/>
+      <mapper resource="com/lost/mybatis/mappers/Notice-Mapper.xml"/>
+      <mapper resource="com/lost/mybatis/mappers/Top-Mapper.xml"/>
+      <mapper resource="com/lost/mybatis/mappers/QnA-Mapper.xml"/>
+      <mapper resource="com/lost/mybatis/mappers/Reply-Mapper.xml"/>
+   </mappers>   
+</configuration>
+
+

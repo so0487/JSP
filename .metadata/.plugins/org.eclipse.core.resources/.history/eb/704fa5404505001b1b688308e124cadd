@@ -1,0 +1,73 @@
+package com.lost.action.qna;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.lost.action.Action;
+import com.lost.request.SearchCriteria;
+import com.lost.service.QnAService;
+
+public class QnAListAction implements Action {
+
+	private QnAService qnaService;
+
+	public void setQnaService(QnAService qnaService) {
+		this.qnaService = qnaService;
+	}
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String url = "/qna/list";
+
+		/*
+		String page = request.getParameter("page");
+		String perPageNum = request.getParameter("perPageNum");
+		String searchType = request.getParameter("searchType");
+		String keyword = request.getParameter("keyword");
+
+		SearchCriteria cri = new SearchCriteria(page,perPageNum,searchType,keyword);
+		
+		
+		
+		
+
+		try {
+			cri.setPage(Integer.parseInt(page));
+			cri.setPerPageNum(Integer.parseInt(perPageNum));
+		} catch (NumberFormatException e) {
+			System.out.println("페이지 번호를 1로 세팅합니다.");
+
+		}
+		if (searchType != null && keyword != null) {
+			cri.setSearchType(searchType);
+			cri.setKeyword(keyword);
+		}
+		
+		
+
+		Map<String, Object> dataMap = null;
+		
+		
+		try {
+			
+			dataMap=qnaService.getQnAList(cri);
+			
+			request.setAttribute("dataMap", dataMap);
+			
+			System.out.println("dataMap : "+dataMap);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			url = null;
+		}
+		 */
+
+		return url;
+	}
+
+}

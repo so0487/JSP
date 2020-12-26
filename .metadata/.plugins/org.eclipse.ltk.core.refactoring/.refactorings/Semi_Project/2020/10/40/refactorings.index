@@ -1,0 +1,21 @@
+1601610066465	Rename resource 'AdminProduct-Mapper.xml'
+1601614448111	Delete element
+1601614452114	Delete element
+1601614500569	Delete element
+1601617100172	Rename type 'AdminProductDAO'
+1601617117762	Rename type 'AdminProductDAOImpl'
+1601617164051	Rename type 'AdminProductService'
+1601617173841	Rename type 'AdminProductServiceImpl'
+1601618184578	Rename resource 'AdminProduct-Mapper.xml'
+1601618311507	Delete elements
+1601618319737	Delete element
+1601618325672	Delete elements
+1601619700772	Rename resource 'AdminProduct-Mapper.xml'
+1601633243661	Move 'img' to 'resources'
+1601645307971	Rename resource 'detail.jsp'
+1601648177928	Delete element
+1601654642378	Delete element
+1601654699815	Delete element
+1601686909609	Rename type 'BoardVO'
+1601695265886	Copy package
+1601695325421	Delete elements
